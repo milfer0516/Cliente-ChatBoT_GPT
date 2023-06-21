@@ -6,7 +6,7 @@ const form = document.querySelector("form");
 const chatContainer = document.getElementById("chat_container");
 const outPutElement = document.getElementById("output");
 //Url API
-const URL_API = "https://milfer-chat-bot.onrender.com/find-chatBot";
+const URL_API = "https://milfer-chat-bot.onrender.com/";
 
 let loadInterval;
 
