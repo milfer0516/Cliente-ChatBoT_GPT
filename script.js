@@ -77,8 +77,9 @@ const handleSubmit = async (e) => {
 
 	chatContainer.scrollTop = chatContainer.scrollHeight;
 	const messageDiv = document.getElementById(uniqueId);
-	console.log(messageDiv);
+	//console.log(messageDiv);
 
+	//console.log(loader(messageDiv));
 	loader(messageDiv);
 
 	// Petición a la API con Fetch
@@ -92,14 +93,14 @@ const handleSubmit = async (e) => {
 		}),
 	});
 	clearInterval(loadInterval);
-	console.log(response);
+	//console.log(response);
 	messageDiv.innerHTML = "";
 	//outPutElement.textContent = response.data.message[0].content;
 	if (response.ok) {
 		const data = await response.json();
 		//console.log(data);
 		const parsedData = data.data.trim();
-		console.log(parsedData);
+		//console.log(parsedData);
 
 		typeText(messageDiv, parsedData);
 	} else {
